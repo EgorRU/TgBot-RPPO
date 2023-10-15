@@ -95,7 +95,7 @@ async def method_1(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI92GT_WFJdR0b6XYG7lNnsj5KWShwcAALLOgAC3_T4SxcNApLB_AbEMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7VmT_ZFOwa758PAwO3bA0l1YQgZCnAALOOAACunMBSDtE0Ih3TWbDMAQ")
         await callback.message.answer('Проект на тему "Анализ данных"', reply_markup=keyboard1)
         await callback.answer()
 
@@ -109,7 +109,7 @@ async def method_2(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI92mT_WKFOk22-y0vp5RZqIbmO00BiAALMOgAC3_T4S340Z0B9V9HRMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7WGT_ZFg4ecJpnw6ASk9-hyNjMOTGAALPOAACunMBSP1vLMqA7ZjFMAQ")
         await callback.message.answer('Проект на тему "UIUX-дизайн"', reply_markup=keyboard2)
         await callback.answer()
         
@@ -123,7 +123,7 @@ async def method_3(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI93GT_WR_1RDKFtkiF4z4GfilwfRbhAALVOgAC3_T4S7RSt5T2cm0AATAE")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7WmT_ZF5LcRpzM3EgqGLQ5y1ZIZd_AALQOAACunMBSEm8uB9u6UJiMAQ")
         await callback.message.answer('Проект на тему "Веб-разработка"', reply_markup=keyboard3)
         await callback.answer()
         
@@ -137,7 +137,7 @@ async def method_4(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI93mT_WZPQaZYxC56EJZhGob03lhJrAALbOgAC3_T4S0GNS1XQ753bMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7XGT_ZF-3gm4KbZySFK79JjsNwwvZAALROAACunMBSPu4s-5yidAPMAQ")
         await callback.message.answer('Проект на свободну тему', reply_markup=keyboard4)
         await callback.answer()
         
@@ -151,7 +151,7 @@ async def pattern1(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI97mT_WqjEPKj5qAgI0Jkx2yB1QTLWAALlOgAC3_T4S-9hONV5do_pMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAKAkGUIdRLHSIIkS_iYkQgbI78iWEFHAAIBNwACM6ZBSITCE477vt9WMAQ")
         await callback.message.answer('Проект на тему "Анализ данных"', reply_markup=keyboard1)
         await callback.answer()
 
@@ -165,7 +165,7 @@ async def pattern2(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI98GT_WrFzgMKC5bgbnv4bMKka4E1mAALmOgAC3_T4S2p88mY1WDvKMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7UGT_Y5XM0ZqHJvdNRUmBJutzMXTDAALGOAACunMBSEo5VqVd1fPgMAQ")
         await callback.message.answer('Проект на тему "UIUX-дизайн"', reply_markup=keyboard2)
         await callback.answer()
         
@@ -179,7 +179,7 @@ async def pattern3(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI98mT_WrVSDEOZ4My6-AvUOM6kTp0BAALnOgAC3_T4S5fkAAGjbKyD2DAE")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7UmT_Y5hGMEztyfNOr7nBqwpF5t6gAALHOAACunMBSGnQ-SfhHsgXMAQ")
         await callback.message.answer('Проект на тему "Веб-разработка"', reply_markup=keyboard3)
         await callback.answer()
         
@@ -193,7 +193,7 @@ async def pattern4(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI99GT_WrfW6wg4USZgbtDa25l4PAABwAAC6DoAAt_0-Es5FVqEpWdiLTAE")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7U2T_Y5hhzfh0E26EXLUNv4enTosBAALIOAACunMBSLyefhh4QPdiMAQ")
         await callback.message.answer('Проект на свободну тему', reply_markup=keyboard4)
         await callback.answer()
         
@@ -207,6 +207,6 @@ async def add_material1(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI-BGT_XIxaEooUyCQI0DY85UVRZEbOAAL4OgAC3_T4S3FVabFHhZH9MAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7XmT_ZJ4grbc8DMHZo6ur6wccZb9rAALXOAACunMBSEt049WhPFbdMAQ")
         await callback.message.answer('Проект на тему "Анализ данных"', reply_markup=keyboard1)
         await callback.answer()

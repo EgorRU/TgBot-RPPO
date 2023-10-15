@@ -1,4 +1,3 @@
-import asyncio
 from aiogram import Bot, Dispatcher
 from app.admin import router_admin
 from app.client import router_client
@@ -12,12 +11,14 @@ from app.module_6 import router_module_6
 from app.module_7 import router_module_7
 from app.module_8 import router_module_8
 from config import TOKEN_WORK_BOT, TOKEN_TEST_BOT
+import asyncio
+
+
+bot = Bot(token=TOKEN_TEST_BOT)
+dp = Dispatcher()
 
 
 async def main():
-    bot = Bot(token=TOKEN_WORK_BOT)
-    dp = Dispatcher()
-    dp.include_router(router_admin)
     dp.include_router(router_client)
     dp.include_router(router_tutor)
     dp.include_router(router_module_1)
@@ -26,9 +27,12 @@ async def main():
     dp.include_router(router_module_4)
     dp.include_router(router_module_5)
     dp.include_router(router_module_6)
+    dp.include_router(router_module_7)
     dp.include_router(router_module_8)
+    dp.include_router(router_admin)
     await dp.start_polling(bot)
 
 
 if __name__ == '__main__':
     asyncio.run(main())
+

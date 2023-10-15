@@ -33,7 +33,7 @@ async def file_4(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI7zGT_NahmIErIaLv1v9hRf5iAhh5SAAJ2OAAC3_T4S8G13Su5bMKlMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9DWT_b0CKRsEEaNOrHqcqmGfyvTC9AAJdOQACunMBSKWDOQ9SJgABgjAE")
         await callback.message.answer("Модуль 4", reply_markup=keyboard)
         await callback.answer()
 
@@ -68,8 +68,8 @@ async def material_41(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI7zmT_NiQhOI-3WTNZZiffYYAYU5FEAAKCOAAC3_T4Sz_JX0W2wiHVMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI70GT_Nifa-C2d_3wm16exysb64gTPAAKEOAAC3_T4S9TGTYvAz_2RMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9D2T_b0QKOF4RehBZ4qv1Xq7szpLAAAJeOQACunMBSGrCSGVTnYUDMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9EWT_b0Z7b1EJl41_v_oeS7YgXEMCAAJhOQACunMBSFdMOk1w7aTDMAQ")
         await callback.message.answer("Раздел лекций 4 модуля", reply_markup=keyboard_lecture)
         await callback.answer()
 
@@ -82,8 +82,8 @@ async def material_42(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI70mT_Nk4bZY_oDQqSjsBF5mdLiOngAAKJOAAC3_T4S7gyHEgLJD1bMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI71GT_NlR4QUWkWw4zMwcGY8j4wm7eAAKLOAAC3_T4S-R2pueV_vCyMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9E2T_b2WwO0-ZBrtwMcsfMYJJveSTAAJkOQACunMBSEpgXJuZLJBoMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9FWT_b2kv0l7ICRelQ8_QNbjEFkYmAAJlOQACunMBSOEP9UKwbZO0MAQ")
         await callback.message.answer("Раздел лекций 4 модуля", reply_markup=keyboard_lecture)
         await callback.answer()
         
@@ -96,8 +96,8 @@ async def material_43(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI71mT_Nn38vcCO8u3d3oi0RSb-hw_OAAKPOAAC3_T4S9e1FSLLGH3SMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI72GT_NoAtdZc6nM9Jsgbo0CSGw7tcAAKQOAAC3_T4S6PnAZa9dBWUMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9F2T_b4JMQB-T79-JgQTGS2Aw0s5XAAJmOQACunMBSKih58gFO7G3MAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9GWT_b4SyjqLEQm1E9BwSrD-VBWBZAAJnOQACunMBSElVXZyO7V9KMAQ")
         await callback.message.answer("Раздел лекций 4 модуля", reply_markup=keyboard_lecture)
         await callback.answer()
         
@@ -110,8 +110,8 @@ async def material_44(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI72mT_NqnXAAH2E0eqY0Utng_xGjZLtgAClzgAAt_0-EvotVRgyYq5WzAE")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI73GT_Nq890UYP2CpU9--iHqIwQuPaAAKZOAAC3_T4S8iApDPpJvObMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9G2T_b5_QhFtJUPYisErYDiyq2TmuAAJoOQACunMBSEYCOCKMNutUMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9HWT_b6MEu3ZEtUx4XJfW3jmk87TlAAJpOQACunMBSBiugMTvXPA_MAQ")
         await callback.message.answer("Раздел лекций 4 модуля", reply_markup=keyboard_lecture)
         await callback.answer()
         
@@ -124,9 +124,9 @@ async def material_45(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI73mT_NtZk0KlixnO2rN889rwueC3FAAKfOAAC3_T4S5xMkRJcw1r4MAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI74GT_Ntk5eNH4sZG9hAdFb9KFXWGjAAKgOAAC3_T4S8Orf3vnmr9LMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI74mT_Nt10EAiBNnOrrBBDfOfjug2RAAKiOAAC3_T4Sz9UuHMwtfurMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9H2T_b8AjYodCvbCn1dT2GGjCfwqXAAJqOQACunMBSO9Fs9JZn9b2MAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9IWT_b8Nhlcwvz_fPDcywPP5m5X6iAAJrOQACunMBSNSEBvkbrRBvMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9I2T_b8eD5-dviXR54xUNLjzvkpJIAAJsOQACunMBSDj3apLGFQI9MAQ")
         await callback.message.answer("Раздел лекций 4 модуля", reply_markup=keyboard_lecture)
         await callback.answer()
 
@@ -154,8 +154,8 @@ async def lab_41(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI7_mT_N4GbrSSICVmhHlSglgv6YzPIAAKzOAAC3_T4S32xjTENXZBFMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI8AAFk_zeF_hJUs7pjY_kI17SswFqlbgACtTgAAt_0-EvYSbZSvw3QRDAE")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9ZWT_cH3wnVbaDSbtX48MzSOhEfRdAAJzOQACunMBSGHLkCMl5Qo5MAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9Z2T_cIAm5nka2uf0DshdOE_C9bTCAAJ1OQACunMBSO1WrkbjuU2BMAQ")
         await callback.message.answer("Раздел лабораторных работ 4 модуля", reply_markup=keyboard_labs)
         await callback.answer()
 
@@ -168,9 +168,9 @@ async def lab_42(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI8AmT_N7JU37z8RBRcZrgPuZ1Jd_ypAAK7OAAC3_T4SxMPSEGAhahLMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI8BGT_N7YhB9yAjrZ33qg-FY-KLmNYAAK8OAAC3_T4S48fOAGkCAOmMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI8BmT_N7kn-vMhQyxHdGEK8-T6JegzAAK9OAAC3_T4S9_ohQ6YPqQ6MAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9aWT_cJnH_SPLCxFbTIIy13MOtBYhAAJ3OQACunMBSAoTGpw5zPruMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9a2T_cJvpVKVvD4xkDk6vJSHSB7AlAAJ4OQACunMBSDbW3IdjdUCCMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9bWT_cKC__6dO2cSnqLQb_eEGetXRAAJ7OQACunMBSGPI2NflJ3kUMAQ")
         await callback.message.answer("Раздел лабораторных работ 4 модуля", reply_markup=keyboard_labs)
         await callback.answer()
         
@@ -183,8 +183,8 @@ async def lab_43(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Подождите, файл загружается")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI8CGT_N-s8v--QU-k-DmcI-CQif2cNAALFOAAC3_T4SxZ3DfKpTqnSMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI8CmT_N-1TN4TDYt_LKSo_nFGarJ3CAALGOAAC3_T4Sz8UT2Cafr5MMAQ")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI8DGT_N_F7mwuxCEpnOu1peugVeXnhAALIOAAC3_T4S0WkNUuKhAOFMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9b2T_cLuaAnIleAoM_xTPxqH3CkJmAAKDOQACunMBSMKP5pjQ0tVvMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9cWT_cL7JFMoOOKpoXDIEd6HGi3htAAKEOQACunMBSBX1N15bMOfEMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ9c2T_cMFb1PAdTSLrrzPinYnreTLlAAKGOQACunMBSG6ofDj6t4hpMAQ")
         await callback.message.answer("Раздел лабораторных работ 4 модуля", reply_markup=keyboard_labs)
         await callback.answer()

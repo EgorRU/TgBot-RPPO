@@ -29,6 +29,6 @@ async def group_tutor(callback: CallbackQuery):
         pass
     finally:
         await callback.message.answer("Распред. тьюторов по группам:\n")
-        await callback.message.answer_document(document="BQACAgIAAxkBAAI6QWT_IlI9YcZEEodo6U6l6jdR7E_MAALiNgACf_H4S1taicaVUspNMAQ")
+        await callback.message.answer_document(document="BQACAgIAAxkBAAJ7TGT_Y1WugSMKbjzHVATrwN05BZGmAALBOAACunMBSMFL6_9rHsYWMAQ")
         await callback.message.answer("Клавиатура тьютора", reply_markup=keyboard)
         await callback.answer()

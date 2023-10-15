@@ -1,6 +1,8 @@
 from aiogram import Router, F
-from aiogram.types import Message
+from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from config import ADMIN_API
+from other import update_BD
+import sqlite3
 
 
 router_admin = Router()
@@ -52,6 +54,33 @@ async def info(message: Message):
     else:
         await message.answer("Недостаточно прав")
 
+
+@router_admin.callback_query()
+async def other(callback: CallbackQuery):
+    await update_BD(callback, "Меню")
+    base = sqlite3.connect("database.db")
+    cur = base.cursor()
+    base.execute("CREATE TABLE IF NOT EXISTS registration_data(id PRIMARY KEY, fullname TEXT, username TEXT, time_register TEXT, last_time TEXT, last_action TEXT, count INTEGER, active TEXT)")
+    base.commit()
+    active = int( cur.execute(f"SELECT active FROM registration_data WHERE id={callback.from_user.id}").fetchone()[0])
+    base.close()
+    if active == 2:
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text='Клавиатура тьютора', callback_data='Клавиатура тьютора')],
+        [InlineKeyboardButton(text='Ресурсы ВятГУ', callback_data='Ресурсы ВятГУ')],
+        [InlineKeyboardButton(text='Цифровые кафедры', callback_data='Цифровые кафедры')],
+        [InlineKeyboardButton(text='Помощь с ботом', callback_data='Помощь с ботом')]
+        ])
+        await callback.message.answer("Основной раздел", reply_markup=keyboard)
+    else:
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text='Ресурсы ВятГУ', callback_data='Ресурсы ВятГУ')],
+        [InlineKeyboardButton(text='Цифровые кафедры', callback_data='Цифровые кафедры')],
+        [InlineKeyboardButton(text='Помощь с ботом', callback_data='Помощь с ботом')]
+        ])
+        await callback.message.answer("Основной раздел", reply_markup=keyboard)
+    await callback.answer()
+    
 
 @router_admin.message(F.document)
 async def get_document(message: Message):
