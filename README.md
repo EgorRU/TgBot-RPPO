@@ -1,5 +1,5 @@
 ## Установка и запуск на Windows
-- git clone https://github.com/EgorRU/TelegramBot-2022-2023-VyatsuRPPO
-- cd TelegramBot-2022-2023-VyatsuRPPO
+- git clone https://github.com/EgorRU/TgBot-RPPO
+- cd TgBot-RPPO
 - pip install -r requirements.txt
 - py main.py
