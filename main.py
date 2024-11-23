@@ -1,7 +1,6 @@
 from aiogram import Bot, Dispatcher
 from app.admin import router_admin
 from app.client import router_client
-from app.tutor import router_tutor
 from app.module_1 import router_module_1
 from app.module_2 import router_module_2
 from app.module_3 import router_module_3
@@ -20,7 +19,6 @@ dp = Dispatcher()
 
 async def main():
     dp.include_router(router_client)
-    dp.include_router(router_tutor)
     dp.include_router(router_module_1)
     dp.include_router(router_module_2)
     dp.include_router(router_module_3)
@@ -35,4 +33,3 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-
