@@ -13,10 +13,12 @@ keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Файл с материалами', callback_data='Файл с материалами4'),
      InlineKeyboardButton(text='Тестирование', url='https://vyatsu.ru')],
 
-    [InlineKeyboardButton(text='Выбор модуля', callback_data='Меню')],
+    [InlineKeyboardButton(text='Расписание', url='https://vyatsu.ru')],
+
+    [InlineKeyboardButton(text='Выбор модуля', callback_data='Меню')]
 ])
 
-message_text = '4 модуль - cтандартные библиотеки Python'
+message_text = '4 модуль - Стандартные библиотеки Python'
 
 
 @router_module_4.callback_query(F.data == '4 модуль')

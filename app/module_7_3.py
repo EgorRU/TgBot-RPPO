@@ -13,7 +13,7 @@ keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Файл с материалами', callback_data='Файл с материалами7_3'),
      InlineKeyboardButton(text='Тестирование', url='https://vyatsu.ru')],
 
-    [InlineKeyboardButton(text='Выбор модуля', callback_data='Меню')],
+    [InlineKeyboardButton(text='Выбор модуля', callback_data='Меню')]
 ])
 
 message_text = '7.3 модуль - Основы веб-разработки'

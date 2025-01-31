@@ -16,7 +16,7 @@ keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Выбор модуля', callback_data='Меню')],
 ])
 
-message_text = '1 модуль - основы программирования на Python'
+message_text = '1 модуль - Основы программирования на Python\nhttps://e.vyatsu.ru/course/view.php?id=33137'
 
 
 @router_module_1.callback_query(F.data == '1 модуль')
