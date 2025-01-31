@@ -1,66 +1,67 @@
-from aiogram import Router, F
-from aiogram.types import Message, CallbackQuery
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from other import update_BD
-import sqlite3
+from aiogram import Router, F, BaseMiddleware
 
+from aiogram.types import (
+    Message,
+    CallbackQuery,
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    TelegramObject,
+)
+
+from typing import Callable, Awaitable, Dict, Any
+
+from dbrequests import update_db
 
 router_client = Router()
 
 
-@router_client.message(F.text == '/start')
-async def start(message: Message):
-    await update_BD(message, "/start")
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text='Ресурсы ВятГУ',
-                                callback_data='Ресурсы ВятГУ')],
-        [InlineKeyboardButton(text='Цифровые кафедры',
-                                callback_data='Цифровые кафедры')],
+def create_module_keyboard():
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text='1 модуль', callback_data='1 модуль'),
+         InlineKeyboardButton(text='2 модуль', callback_data='2 модуль'),
+         InlineKeyboardButton(text='3 модуль', callback_data='3 модуль')],
+
+        [InlineKeyboardButton(text='4 модуль', callback_data='4 модуль'),
+         InlineKeyboardButton(text='5 модуль', callback_data='5 модуль'),
+         InlineKeyboardButton(text='6 модуль', callback_data='6 модуль')],
+
+        [InlineKeyboardButton(text='7.1 модуль', callback_data='7_1 модуль'),
+         InlineKeyboardButton(text='7.2 модуль', callback_data='7_2 модуль'),
+         InlineKeyboardButton(text='7.3 модуль', callback_data='7_3 модуль')],
+
+        [InlineKeyboardButton(text='8 модуль', callback_data='8 модуль')]
     ])
-    await message.answer("Основной раздел", reply_markup=keyboard)
+
+
+MODULES_DESCRIPTION = """Курс-хаб: https://e.vyatsu.ru/course/view.php?id=31975
+
+1 модуль - основы программирования на Python
+2 модуль - основы алгоритмизации
+3 модуль - базы данных и реляционная алгебра
+4 модуль - cтандартные библиотеки Python
+5 модуль - моделирование бизнес-процессов
+6 модуль - разработка баз данных
+7.1 модуль - анализ данных
+7.2 модуль - UI/UX-дизайн
+7.3 модуль - Основы веб-разработки
+8 модуль - практика в профильной сфере"""
+
+
+async def send_or_edit_modules_message(message, keyboard):
+    if isinstance(message, Message):
+        await message.answer(MODULES_DESCRIPTION, reply_markup=keyboard)
+    elif isinstance(message, CallbackQuery):
+        await message.message.edit_text(MODULES_DESCRIPTION, reply_markup=keyboard)
+        await message.answer()
+
+
+@router_client.message(F.text == '/start')
+async def start_handler(message: Message):
+    keyboard = create_module_keyboard()
+    await send_or_edit_modules_message(message, keyboard)
 
 
 @router_client.callback_query(F.data == 'Меню')
-async def menu(callback: CallbackQuery):
-    await update_BD(callback, "Меню")
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text='Ресурсы ВятГУ',
-                                callback_data='Ресурсы ВятГУ')],
-        [InlineKeyboardButton(text='Цифровые кафедры',
-                                callback_data='Цифровые кафедры')],
-    ])
-    await callback.message.edit_text("Основной раздел", reply_markup=keyboard)
-    await callback.answer()
-
-
-@router_client.callback_query(F.data == 'Ресурсы ВятГУ')
-async def source_vyatsu(callback: CallbackQuery):
-    await update_BD(callback, "Ресурсы ВятГУ")
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text='Сайт ВятГУ', url='https://www.vyatsu.ru/'),
-         InlineKeyboardButton(text='Личный кабинет', url='https://new.vyatsu.ru/account/')],
-        [InlineKeyboardButton(text='Moodle', url='https://e.vyatsu.ru/'),
-         InlineKeyboardButton(text='VK', url='https://vk.com/vyatsu')],
-        [InlineKeyboardButton(text='Telegram', url='https://t.me/vyatsunews')],
-        [InlineKeyboardButton(text='Меню', callback_data='Меню')]
-    ])
-    await callback.message.edit_text("Ресурсы ВятГУ", reply_markup=keyboard)
-    await callback.answer()
-
-
-@router_client.callback_query(F.data == 'Цифровые кафедры')
-async def digital_departments(callback: CallbackQuery):
-    await update_BD(callback, "Цифровые кафедры")
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text='1 модуль', callback_data='1 модуль'),
-         InlineKeyboardButton(text='2 модуль', callback_data='2 модуль'),
-         InlineKeyboardButton(text='3 модуль', callback_data='3 модуль'),
-         InlineKeyboardButton(text='4 модуль', callback_data='4 модуль')],
-        [InlineKeyboardButton(text='5 модуль', callback_data='5 модуль'),
-         InlineKeyboardButton(text='6 модуль', callback_data='6 модуль'),
-         InlineKeyboardButton(text='7 модуль', callback_data='7 модуль'),
-         InlineKeyboardButton(text='8 модуль', callback_data='8 модуль')],
-        [InlineKeyboardButton(text='Меню', callback_data='Меню')]
-    ])
-    await callback.message.edit_text("1 модуль - основы программирования на Python\n2 модуль - основы алгоритмизации\n3 модуль - базы данных и реляционная алгебра\n4 модуль - cтандартные библиотеки Python\n5 модуль - моделирование бизнес-процессов\n6 модуль - разработка баз данных\n7.1 модуль - анализ данных\n7.2 модуль - UI/UX-дизайн\n7.3 модуль - Основы веб-разработки\n8 модуль - практика в профильной сфере", reply_markup=keyboard)
-    await callback.answer()
+async def menu_handler(callback: CallbackQuery):
+    keyboard = create_module_keyboard()
+    await send_or_edit_modules_message(callback, keyboard)
