@@ -11,7 +11,7 @@ keyboard = InlineKeyboardMarkup(inline_keyboard=[
      InlineKeyboardButton(text='Доп. материал', callback_data='Доп. материал2')],
 
     [InlineKeyboardButton(text='Файл с материалами', callback_data='Файл с материалами2'),
-     InlineKeyboardButton(text='Тестирование', url='https://vyatsu.ru')],
+     InlineKeyboardButton(text='Тестирование', url='https://e.vyatsu.ru/mod/quiz/view.php?id=760553')],
 
     [InlineKeyboardButton(text='Расписание', url='https://docs.google.com/spreadsheets/d/1PRkm9pfTxrnLbW8UV1fNTpxTXlrdl12kEgdDbsztKKs/edit?gid=0#gid=0')],
 
