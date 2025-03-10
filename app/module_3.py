@@ -1,5 +1,5 @@
 from aiogram import Router, F
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, Message
 
 router_module_3 = Router()
 
@@ -11,12 +11,16 @@ keyboard = InlineKeyboardMarkup(inline_keyboard=[
      InlineKeyboardButton(text='Доп. материал', callback_data='Доп. материал3')],
 
     [InlineKeyboardButton(text='Файл с материалами', callback_data='Файл с материалами3'),
-     InlineKeyboardButton(text='Тестирование', url='https://e.vyatsu.ru/course/view.php?id=33139&sectionid=2681099')],
+     InlineKeyboardButton(text='Тестирование', url='https://e.vyatsu.ru/mod/quiz/view.php?id=760581')],
 
     [InlineKeyboardButton(text='Выбор модуля', callback_data='Меню')]
 ])
 
 message_text = '3 модуль - Базы данных и реляционная алгебра\nhttps://e.vyatsu.ru/course/view.php?id=33139'
+
+
+async def send_module_3(message: Message):
+    await message.answer(message_text, reply_markup=keyboard)
 
 
 @router_module_3.callback_query(F.data == '3 модуль')
@@ -27,14 +31,12 @@ async def module_3(callback: CallbackQuery):
 
 @router_module_3.callback_query(F.data == 'Файл с материалами3')
 async def file_3(callback: CallbackQuery):
-    await callback.answer("В разработке", show_alert=True)
-    return
     try:
         await callback.message.delete()
     except:
         pass
     finally:
-        await callback.message.answer_document(document='BQACAgIAAxkBAAICAWec9pkN_CzZ0oUT3gdJhZbTIioRAAJYawACKx_oSPnYTlf0rAyzNgQ')
+        await callback.message.answer_document(document='BQACAgIAAxkBAAIDQGfO-kOhDH4m9OZSpQAByFgpDtqCCAACSG4AAvfDeEqRgKCom7ZbYjYE')
         await callback.message.answer(message_text, reply_markup=keyboard)
         await callback.answer()
 
